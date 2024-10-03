@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  border: 1px solid #000;
+  background: linear-gradient(152deg, rgba(51, 164, 227, 0.60) 0%, rgba(176, 239, 179, 0.60) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 60px;
+}
+
+.form-box {
+  background-color: #fff;
+  padding: 32px 24px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.10);
+  height: 100%;
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.password-label-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-heading{
+  color: #1F81B9;
+text-align: center;
+font-family: "Open Sans";
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%;
+}
+
+
+.description-account{
+  align-self: stretch;
+  color: #333;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.description-delete{
+align-self: stretch;
+color: #333;
+font-family: "Open Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400px;
+line-height: 150%;
+}
+
+label {
+  color: #333;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+}
+
+input[type="email"],
+input[type="password"], 
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 2px 0px;
+}
+
+textarea {
+  display: flex;
+  min-width: 100%;
+  height: 160px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #DDD;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: none;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.characters {
+  text-align: right;
+  color: #aaaaaa;
+  font-size: 14px;
+  font-style: italic;
+  font-family: "Open Sans";
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  margin-right: 10px;
+  height: 22px;
+  width: 22px;
+  border-radius: 7px;
+}
+
+.checkbox-container{
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-round {
+  background-color: #FFFFFF; /* White background when unchecked */
+  border-radius: 50%; /* Rounded checkbox */
+  vertical-align: middle;
+  border: 1px solid #1F81B9; /* Blue border */
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Checkmark style (hidden by default) */
+.checkbox-round::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 12px;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  top: 0px;
+  left: 5px;
+  transform: rotate(40deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Checked state */
+.checkbox-round:checked {
+  background-color: #1F81B9; /* Blue background when checked */
+  border: 2px solid #1F81B9; /* Blue border */
+  border-radius: 7px; /* Slightly rounded edges */
+}
+
+/* Show the bold white checkmark when checked */
+.checkbox-round:checked::before {
+  border-right: 3px solid #FFFFFF; /* White bold checkmark */
+  border-bottom: 3px solid #FFFFFF;
+  opacity: 1; /* Make the checkmark visible */
+}
+
+.radio-item{
+  display: flex;
+  align-items: center;
+}
+
+.radio-group{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  width: 100%; 
+  padding: 12px; 
+  border-radius: 8px; 
+  background: #1F81B9; 
+  color: white; 
+  border: none; 
+  cursor: pointer;
+}
+
+button:hover {
+  border-radius: 8px;
+background: #1F81B9;
+}
+
+.error-message {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  color: #D44848;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.learn-more{
+  color: #E59191;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.char-limit {
+color: #AAA;
+text-align: right;
+font-family: "Open Sans";
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.comments {
+  font-size: 34px;
+}
+
+.comment {
+  color: #333;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  height: 23px;
+  width: 432px;
+}
+
+.warning {
+  color: #D44848;
+font-family: "Open Sans";
+font-size: 13px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}

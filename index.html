@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Create/Delete Account</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Create Account Section -->
+        <div class="container">
+            <form class="form-box">
+                <h2 class="form-heading">Create Account</h2>
+                <p class="description-account">Create your account in a second to receive our latest news!</p>
+                <div class="email-field-container">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="password-filed-container">
+                    <div class="password-label-container">
+                        <label for="password">Password</label>
+                        <span class="characters"> At least 6 characters</span>
+                    </div>
+                    <input type="password" id="password" placeholder="Password"
+                        required />
+                    <span class="error-message">⚠️ Error Message.<a href="#" class="learn-more">Learn more.</a></span>
+                </div>
+                <div class="years-field-container">
+                    <label for="experience">Year of experience</label>
+                    <select id="experience">
+                        <option value disabled selected>Please Select</option>
+                        <option value="0-1">0-1 years</option>
+                        <option value="2-5">2-5 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-container"> 
+                    <input class="checkbox-round" type="checkbox" id="remember-me" name="remember-me" value="Remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+
+                <button type="submit">Create Account</button>
+            </form>
+ 
+            <form class="form-box">
+                <!-- Delete Account Section -->
+                <h2 class="form-heading">Delete Your Account</h2>
+                    <p class="description-delete">We're sorry to see you go. It would be great if we could know the reason behind.</p>
+                    <form>
+                        <p class="warning">⚠️ Please select one of the below reasons.</p>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="privacy" name="reason" value="privacy">
+                                <label for="privacy">I have privacy concerns.</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="not-useful" name="reason" value="not-useful">
+                                <label for="not-useful">I no longer find this useful.</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="irrelevant" name="reason" value="irrelevant">
+                                <label for="irrelevant">I'm receiving irrelevant email contents.</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="too-many" name="reason" value="too-many">
+                                <label for="too-many">I'm getting too many emails.</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="others" name="reason" value="others">
+                                <label for="others">Others</label>
+                            </div>
+                        <div>
+
+                        <div class="comments">
+                        <label class="comment" >Let us know if you've other comments.</label>
+                        </div>
+
+                        <textarea cols="15" id="comments"
+                        placeholder="Your comments (Optional)"></textarea>
+                        <p class="char-limit">Max. 2000 characters</p>
+                        </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>                           
+    </body>
+
+</html>
